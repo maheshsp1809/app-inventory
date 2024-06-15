@@ -1,0 +1,19 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* <div className="flex p-8 m-2 overflow-auto bg-gradient-to-r from-blue-600  to-yellow-200 "> */ 
+/* @layer base {
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply h-full text-white font-sans;
+    background-image: linear-gradient(to right, #3b82f6, #9f7aea, #6366f1);
+  }
+
+  #root {
+    @apply h-full;
+  }
+} */
