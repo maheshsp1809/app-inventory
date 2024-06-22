@@ -111,7 +111,7 @@ const Home = () => {
                 <div className="relative overflow-hidden h-40">
                   <img
                     src={item.img}
-                    alt="card-image"
+                    alt="card"
                     className="object-cover w-full h-full"
                   />
                 </div>
