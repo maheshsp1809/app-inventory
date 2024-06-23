@@ -4,9 +4,7 @@ import ImageCarousel from "./ImageCarousel";
 import Insider from "../insidePage/Insider";
 
 const AppDescription = () => {
-  const location = useLocation();
-  const { desc } = location.state;
-
+  
   return (
     <>
       <Insider />
