@@ -2,11 +2,11 @@ import React from "react";
 
 const Description = () => {
   return (
-    <div className="bg-custom-dark text-white rounded-lg mb-4">
-      <div className="h-auto w-full">
+    <div className="w-[800px] ml-[400px] bg-custom-dark text-white rounded-lg mb-4">
+      <div className="h-auto w-[800px]">
         <div className="px-4 py-2">Description</div>
         <hr />
-        <div className="px-4 py-2 max-h-[300px] overflow-contain">
+        <div className="px-4 py-2 max-h-[300px] overflow-visible">
           <p>
             Bringing you closer to the people and things you love. — Instagram
             from Meta.

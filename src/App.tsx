@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import Routes from "./Routes";
-import { Navbar } from "./Navbar";
-import { Leftbar } from "./Leftbar";
+import Routes from "./components/Routes";
+import { Navbar } from "./components/Navbar";
+import { Leftbar } from "./components/Leftbar";
 
 const App = () => {
   return (

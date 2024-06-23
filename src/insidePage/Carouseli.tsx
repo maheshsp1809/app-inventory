@@ -40,9 +40,10 @@ const Carouseli: React.FC<CarouselProps> = ({
           />
         ))}
       </div>
-      <div className="absolute inset-0 flex items-center justify-between p-4">
+      <div className="absolute inset-0 flex items-center justify-between">
         <button
           onClick={prev}
+          id="prev-nextButton"
           className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
         >
           <ChevronLeft size={20} />
@@ -56,7 +57,7 @@ const Carouseli: React.FC<CarouselProps> = ({
       </div>
 
       <div className="absolute bottom-4 right-0 left-0">
-        <div className="flex items-center justify-center gap-2">
+        <div id="dots" className="flex items-center justify-center gap-2">
           {slides.map((_, i) => (
             <div
               onClick={() => setCurr(i)}
