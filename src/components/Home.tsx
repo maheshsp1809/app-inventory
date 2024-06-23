@@ -97,14 +97,46 @@ const Home = () => {
       <div className="p-4">
         <Grid container spacing={2}>
           {[
-            { img: "./image6.png", desc: "This is vr application" },
-            { img: "./object_placement.png", desc: "This is AR application" },
-            { img: "./pwc.png", desc: "This is vr application" },
-            { img: "./xaudio.png", desc: "This is vr application" },
-            { img: "./xavatar.png", desc: "This is vr application" },
-            { img: "./xpresent.png", desc: "This is vr application" },
-            { img: "./xreailty.png", desc: "This is vr application" },
-            { img: "./xpresent.png", desc: "This is vr application" },
+            {
+              img: "./image6.png",
+              desc: "This is vr application",
+              name: "DigitalTwin",
+            },
+            {
+              img: "./object_placement.png",
+              desc: "This is AR application",
+              name: "DigitalTwin",
+            },
+            {
+              img: "./pwc.png",
+              desc: "This is vr application",
+              name: "DigitalTwin",
+            },
+            {
+              img: "./xaudio.png",
+              desc: "This is vr application",
+              name: "DigitalTwin",
+            },
+            {
+              img: "./xavatar.png",
+              desc: "This is vr application",
+              name: "DigitalTwin",
+            },
+            {
+              img: "./xpresent.png",
+              desc: "This is vr application",
+              name: "DigitalTwin",
+            },
+            {
+              img: "./xreailty.png",
+              desc: "This is vr application",
+              name: "DigitalTwin",
+            },
+            {
+              img: "./xpresent.png",
+              desc: "This is vr application",
+              name: "DigitalTwin",
+            },
           ].map((item, index) => (
             <Grid item xs={3} key={index} className="m-4 w-80">
               <Card className="rounded-xl shadow-md transition-transform transform hover:scale-105">

@@ -2,7 +2,7 @@ import React from "react";
 
 const RatingsAndReviews = () => {
   return (
-    <div className="relative ml-[400px] m-1 bg-custom-dark text-white rounded-lg">
+    <div className="w-[800px] ml-[400px] m-1 bg-custom-dark text-white rounded-lg">
       <div className="h-[400px] w-full pb-10 ">
         <div className="px-6 py-4">RatingsAndReviews</div>
         <hr />

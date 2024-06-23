@@ -6,7 +6,7 @@ import { Leftbar } from "./components/Leftbar";
 
 const App = () => {
   return (
-    <div className="flex pl-8 pt-8 mt-3 ml-3 overflow-auto ">
+    <div className="flex pl-8 pt-8 mt-3 ml-3 overflow-auto bg-custom-bg-bg-dark">
       <div className="App">
         <Navbar />
         <div className="flex">
