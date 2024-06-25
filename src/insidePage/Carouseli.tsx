@@ -36,7 +36,7 @@ const Carouseli: React.FC<CarouselProps> = ({
             key={index}
             src={img}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-contain flex-shrink-0"
+            className="w-full px-5 h-full object-contain flex-shrink-0"
           />
         ))}
       </div>

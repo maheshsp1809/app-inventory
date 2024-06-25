@@ -2,7 +2,7 @@ import React from "react";
 // src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png"
 const Sidebar = () => {
   return (
-    <div className="fixed rounded-2lg">
+    <div className="fixed ml-10  rounded-2lg">
       <div className="h-[100vh] w-96 bg-custom-dark relative">
         <div className="absolute z-20 h-[160px] w-[160px] bg-gradient-to-r from-purple-400 to-blue-500 m-[91px] rounded-lg p-1">
           <img className=" " src="/image6.png" alt="Instagram Logo" />
