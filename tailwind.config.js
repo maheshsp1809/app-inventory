@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "custom-dark": "rgb(43,43,43)",
         "custom-bg-bg-dark": "rgb(32, 32, 32)",
+        "grid-template-columns-2": "200px 300px ",
       },
     },
   },

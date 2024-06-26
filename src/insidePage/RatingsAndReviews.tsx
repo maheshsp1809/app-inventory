@@ -2,11 +2,11 @@ import React from "react";
 
 const RatingsAndReviews = () => {
   return (
-    <div className="w-auto ml-[40%] w-[100%] m-1 bg-custom-dark text-white rounded-lg">
-      <div className="h-auto w-auto pb-10 ">
+    <div className="w-auto   bg-custom-dark text-white rounded-lg">
+      <div className=" pb-10 ">
         <div className="px-6 py-4">RatingsAndReviews</div>
         <hr />
-        <div className="px-4 py-2 max-h-auto ">
+        <div className="px-4 py-2  ">
           <p>
             Bringing you closer to the people and things you love. — Instagram
             from Meta.

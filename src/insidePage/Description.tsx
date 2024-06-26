@@ -8,11 +8,11 @@ const Description = () => {
   };
 
   return (
-    <div className="w-full ml-[40%] bg-custom-dark text-white rounded-lg mb-4">
+    <div className="w-full  bg-custom-dark text-white rounded-lg mb-4">
       <div className="h-auto w-full">
         <div className="px-4 py-2">Description</div>
         <hr />
-        <div className="px-4 py-2 max-h-auto overflow-visible">
+        <div className="px-4 py-2 max-h-auto overflow-auto">
           <p>
             Bringing you closer to the people and things you love. — Instagram
             from Meta.
