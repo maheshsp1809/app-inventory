@@ -28,7 +28,7 @@ const RatingsAndReviews: React.FC<RatingsAndReviewsProps> = ({
     <div className="w-full bg-custom-dark text-white rounded-lg p-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold">Ratings and reviews</h2>
-        <span className="text-gray-400">&gt;</span>
+        <span className="text-gray-400"></span>
       </div>
 
       <div className="flex items-start mb-6">
