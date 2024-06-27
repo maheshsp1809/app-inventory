@@ -3,10 +3,10 @@ import React from "react";
 const Sidebar = () => {
   return (
 
-    <div className="fixed  h-[100vh] p-10 bg-custom-dark absolute  rounded-xl">
-      <div className="flex flex-col items-center justify-center rounded-xl">
-        <div className="p-5  w-80 rounded-xl">
-          <img className=" rounded-xl " src="/image6.png" alt="Instagram Logo" />
+    <div className="fixed   h-[100vh] max-w-7/12 p-10 bg-custom-dark absolute  rounded-xl">
+      <div className="flex flex-col w-auto items-center justify-center rounded-xl">
+        <div className="p-5  w-full rounded-xl">
+          <img className=" rounded-xl min-w-auto" src="/image6.png" alt="Instagram Logo" />
         </div>
 
         <h1 className="text-white text-1xl text-fuchsia-400 ">
@@ -27,9 +27,6 @@ const Sidebar = () => {
             <p>Average</p>
           </div>
         </div>
-
-
-
       </div>
       {/* <div className="h-[100vh]  w-100   bg-custom-dark absolute  rounded-2lg">
         <div className=" z-0 h-[22%] w-auto bg-gradient-to-r from-purple-400 to-blue-500  rounded-lg p-1">
