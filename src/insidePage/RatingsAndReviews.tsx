@@ -1,45 +1,89 @@
 import React from "react";
+import { FaStar } from "react-icons/fa";
 
-const RatingsAndReviews = () => {
+interface RatingsAndReviewsProps {
+  ratings_reviews: {
+    averageRating: number;
+    totalRatings: number;
+    ratingCounts: { [key: number]: number };
+    topReview: {
+      title: string;
+      rating: number;
+      comment: string;
+      author: string;
+      date: string;
+      likes: number;
+      dislikes: number;
+    };
+  };
+}
+
+const RatingsAndReviews: React.FC<RatingsAndReviewsProps> = ({
+  ratings_reviews,
+}) => {
+  const { averageRating, totalRatings, ratingCounts, topReview } =
+    ratings_reviews;
+
   return (
-    <div className="w-auto   bg-custom-dark text-white rounded-lg">
-      <div className=" pb-10 ">
-        <div className="px-6 py-4">RatingsAndReviews</div>
-        <hr />
-        <div className="px-4 py-2  ">
-          <p>
-            Bringing you closer to the people and things you love. — Instagram
-            from Meta.
-            <br />
-            <br />
-            Connect with friends, share what you're up to or see what's new from
-            others all over the world. Explore our community where you can feel
-            free to be yourself and share everything from your daily moments to
-            life's highlights.
-            <br />
-            <br />
-            Express yourself and connect with friends
-            <br />
-            <br />
-            * Post photos and videos to your feed that you want to show on your
-            profile. * Message your friends with Messenger. Share and connect
-            over what you see on feed and Stories.
-            <br />
-            <br />
-            Learn more about your interests
-            <br />
-            <br />
-            * Watch videos from your favourite creators and discover new content
-            through Instagram video.
-            <br />
-            * Be inspired by photos and videos from new accounts in Explore.
-            <br />
-            Some Instagram features may not be available in your country or
-            region.
-            <br />
+    <div className="w-full bg-custom-dark text-white rounded-lg p-4">
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-xl font-semibold">Ratings and reviews</h2>
+        <span className="text-gray-400">&gt;</span>
+      </div>
+
+      <div className="flex items-start mb-6">
+        <div className="mr-8">
+          <span className="text-6xl font-bold">{averageRating.toFixed(1)}</span>
+          <p className="text-sm text-gray-400">
+            {totalRatings.toLocaleString()} RATINGS
           </p>
         </div>
+        <div className="flex-1">
+          {[5, 4, 3, 2, 1].map((rating) => (
+            <div key={rating} className="flex items-center">
+              <FaStar className="w-4 h-4 text-yellow-400 mr-1" />
+              <div className="w-full bg-gray-700 rounded-full h-2 mr-2">
+                <div
+                  className="bg-yellow-400 h-2 rounded-full"
+                  style={{
+                    width: `${(ratingCounts[rating] / totalRatings) * 100}%`,
+                  }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
+
+      <div>
+        <h3 className="text-lg mb-2">{topReview.title}</h3>
+        <div className="flex items-center mb-2">
+          {[...Array(5)].map((_, i) => (
+            <FaStar
+              key={i}
+              className={`w-4 h-4 ${
+                i < topReview.rating ? "text-yellow-400" : "text-gray-600"
+              } mr-1`}
+            />
+          ))}
+          <span className="text-purple-400 ml-2">
+            MOST HELPFUL FAVOURABLE REVIEW
+          </span>
+        </div>
+        <p className="mb-2">{topReview.comment}</p>
+        <div className="flex items-center text-sm text-gray-400">
+          <span>{topReview.author}</span>
+          <span className="mx-2">•</span>
+          <span>{topReview.date}</span>
+          <div className="ml-auto flex items-center">
+            <span className="mr-4">👍 {topReview.likes}</span>
+            <span className="mr-4">👎 {topReview.dislikes}</span>
+            <span>🚩</span>
+          </div>
+        </div>
+      </div>
+
+      <button className="mt-4 text-gray-400">See all</button>
     </div>
   );
 };

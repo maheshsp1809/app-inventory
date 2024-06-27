@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import Routes from "./components/Routes";
 import { Navbar } from "./components/Navbar";
 import { Leftbar } from "./components/Leftbar";
+import AppRoutes from "./components/AppRoutes";
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <div className="flex">
           <Leftbar />
           <main className="flex-1 ml-2">
-            <Routes />
+            <AppRoutes />
           </main>
         </div>
       </div>

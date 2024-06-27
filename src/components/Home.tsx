@@ -12,7 +12,7 @@ import {
   Grid,
 } from "@mui/material";
 
-const Home = () => {
+const Home: React.FC = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -50,6 +50,57 @@ const Home = () => {
   const handlePrevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
+
+  const products = [
+    {
+      id: 1,
+      img: "./image6.png",
+      desc: "This is vr application",
+      name: "DigitalTwin",
+    },
+    {
+      id: 2,
+      img: "./object_placement.png",
+      desc: "This is AR application",
+      name: "ObjectPlacement",
+    },
+    {
+      id: 3,
+      img: "./pwc.png",
+      desc: "This is vr application",
+      name: "PWC",
+    },
+    {
+      id: 4,
+      img: "./xaudio.png",
+      desc: "This is vr application",
+      name: "Xaudio",
+    },
+    {
+      id: 5,
+      img: "./xavatar.png",
+      desc: "This is vr application",
+      name: "Xavatar",
+    },
+    {
+      id: 6,
+      img: "./xpresent.png",
+      desc: "This is vr application",
+      name: "Xpresent",
+    },
+    {
+      id: 7,
+      img: "./xreailty.png",
+      desc: "This is vr application",
+      name: "Xreality",
+    },
+    {
+      id: 8,
+      img: "./xpresent.png",
+      desc: "This is vr application",
+      name: "Xpresent",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -96,49 +147,8 @@ const Home = () => {
 
       <div className="p-4">
         <Grid container spacing={2}>
-          {[
-            {
-              img: "./image6.png",
-              desc: "This is vr application",
-              name: "DigitalTwin",
-            },
-            {
-              img: "./object_placement.png",
-              desc: "This is AR application",
-              name: "DigitalTwin",
-            },
-            {
-              img: "./pwc.png",
-              desc: "This is vr application",
-              name: "DigitalTwin",
-            },
-            {
-              img: "./xaudio.png",
-              desc: "This is vr application",
-              name: "DigitalTwin",
-            },
-            {
-              img: "./xavatar.png",
-              desc: "This is vr application",
-              name: "DigitalTwin",
-            },
-            {
-              img: "./xpresent.png",
-              desc: "This is vr application",
-              name: "DigitalTwin",
-            },
-            {
-              img: "./xreailty.png",
-              desc: "This is vr application",
-              name: "DigitalTwin",
-            },
-            {
-              img: "./xpresent.png",
-              desc: "This is vr application",
-              name: "DigitalTwin",
-            },
-          ].map((item, index) => (
-            <Grid item xs={3} key={index} className="m-4 w-80">
+          {products.map((item) => (
+            <Grid item xs={3} key={item.id} className="m-4 w-80">
               <Card className="rounded-xl shadow-md transition-transform transform hover:scale-105">
                 <div className="relative overflow-hidden h-40">
                   <img
@@ -150,7 +160,7 @@ const Home = () => {
                 <div className="p-4">
                   <p className="text-gray-700">{item.desc}</p>
                   <div className="flex justify-between mt-4">
-                    <Link to="/appDescription" state={{ desc: item.desc }}>
+                    <Link to={`/appDescription/${item.id}`}>
                       <Button className="bg-blue-950 text-white font-bold text-lg px-6 py-2 rounded-lg hover:bg-blue-800">
                         View
                       </Button>

@@ -1,12 +1,14 @@
 import React from "react";
 import Carouseli from "./Carouseli";
 
-const ImageCarousel: React.FC = () => {
-  const slides: string[] = ["/image3.png", "/image2.png", "/image3.png"];
+interface ImageCarouselProps {
+  screenshots: string[];
+}
 
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ screenshots }) => {
   return (
     <div className="h-full">
-      <Carouseli slides={slides} />
+      <Carouseli slides={screenshots} />
     </div>
   );
 };
