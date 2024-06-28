@@ -19,13 +19,7 @@ const Description: React.FC<DescriptionProps> = ({ description }) => {
         <div className="px-4 py-2 max-h-auto overflow-auto">
           <p>
             {description}
-            <br />
-            <button
-              onClick={handleShowMore}
-              className="my-2 text-cyan-500 translate-x-2"
-            >
-              {showMore ? "Show Less..." : "Show More..."}
-            </button>
+
             {showMore && (
               <>
                 <p>
@@ -89,6 +83,13 @@ const Description: React.FC<DescriptionProps> = ({ description }) => {
                 </p>
               </>
             )}
+            <br />
+            <button
+              onClick={handleShowMore}
+              className="my-2 text-cyan-500 translate-x-2"
+            >
+              {showMore ? "Show Less..." : "Show More..."}
+            </button>
           </p>
         </div>
       </div>
